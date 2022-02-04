@@ -1,0 +1,16 @@
+.container {
+    background-color: #a036e2;
+    display: grid; 
+    grid-template-columns: 0.4fr 2.2fr 0.4fr; 
+    grid-template-rows: 0.4fr 2.4fr 0.2fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "left-blade header right-blade"
+      "left-blade content right-blade"
+      "left-blade footer right-blade"; 
+  }
+  .header { grid-area: header; text-align: center; font-family: "Lucida Console", monospace; }
+  .content { grid-area: content; text-align: center; font-family: "Monaco", monospace; }
+  .footer { grid-area: footer; }
+  .right-blade { grid-area: right-blade; }
+  .left-blade { grid-area: left-blade; }
