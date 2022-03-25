@@ -1,3 +1,4 @@
+/*Main Site CSS*/
 .container {
     background-color: #a036e2;
     display: grid; 
@@ -6,11 +7,33 @@
     gap: 0px 0px; 
     grid-template-areas: 
       "left-blade header right-blade"
-      "left-blade content right-blade"
+      "left-blade content  right-blade"
+      "left-blade loader  right-blade"
       "left-blade footer right-blade"; 
   }
   .header { grid-area: header; text-align: center; font-family: "Lucida Console", monospace; }
   .content { grid-area: content; text-align: center; font-family: "Monaco", monospace; }
-  .footer { grid-area: footer; }
+  .footer { grid-area: footer; text-align: center;  font-family: "Lucia Console", monospace;}
+
+  /*Loader CSS*/
+  .loader {
+    display: flex;
+    align-content: center;
+    margin: 0 auto;
+    grid-area: loader;
+    border: 16px solid #ee1e1e; /* Red */
+    border-top: 16px solid #12e97d; /* Green */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
   .right-blade { grid-area: right-blade; }
   .left-blade { grid-area: left-blade; }
+  
+  
