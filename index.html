@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristian Care MSc - CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #0a0a0a;
+            color: #00ff00;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            line-height: 1.4;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .terminal {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #000;
+            border: 2px solid #00ff00;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        }
+        
+        .terminal-header {
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .prompt {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        
+        .command {
+            color: #ffff00;
+        }
+        
+        .output {
+            color: #00ff00;
+            margin-left: 0;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            color: #00ffff;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+        
+        .name {
+            color: #ffff00;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            color: #00ffff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            color: #ffffff;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .skill-category {
+            border: 1px solid #00ff00;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        
+        .skill-category h4 {
+            color: #ffff00;
+            margin-bottom: 5px;
+        }
+        
+        .experience-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #00ff00;
+            padding-left: 15px;
+        }
+        
+        .job-title {
+            color: #ffff00;
+            font-weight: bold;
+        }
+        
+        .company {
+            color: #00ffff;
+        }
+        
+        .duration {
+            color: #ffffff;
+            font-size: 0.9em;
+        }
+        
+        .location {
+            color: #888;
+            font-size: 0.9em;
+        }
+        
+        .education-item {
+            margin-bottom: 10px;
+            padding: 8px;
+            border-left: 2px solid #00ffff;
+            padding-left: 12px;
+        }
+        
+        .degree {
+            color: #ffff00;
+            font-weight: bold;
+        }
+        
+        .institution {
+            color: #00ffff;
+        }
+        
+        .year {
+            color: #ffffff;
+            font-size: 0.9em;
+        }
+        
+        .cursor {
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .ascii-art {
+            color: #00ff00;
+            font-size: 0.8em;
+            text-align: center;
+            margin-bottom: 20px;
+            white-space: pre;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .terminal {
+                padding: 15px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .name {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <span class="prompt">user@github-pages:~$</span> <span class="command">cat kristian_care_cv.txt</span>
+        </div>
+        
+        <div class="ascii-art">
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                              CURRICULUM VITAE                               ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+        </div>
+        
+        <div class="output">
+            <div class="name">KRISTIAN CARE MSc</div>
+            <div class="title">Senior Technical Consultant</div>
+            
+            <div class="contact-info">
+                <div class="contact-item">📧 kris_care@hotmail.com</div>
+                <div class="contact-item">🔗 linkedin.com/in/kristian-care-msc-735aa3124</div>
+                <div class="contact-item">📍 Cults, Scotland, United Kingdom</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">SUMMARY</div>
+                <div class="output">
+Senior Technical Consultant with educational background in Computing and 
+Artificial Intelligence. Professional experience in technical support and 
+development. Main focus: bringing digital elements to improve legacy workflows, 
+increasing revenue potential, R&D time, and exploring enriched digital solutions.
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">TECHNICAL SKILLS</div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Cloud & DevOps</h4>
+                        <div>• Microsoft Azure</div>
+                        <div>• Azure DevOps</div>
+                        <div>• Azure Logic Apps</div>
+                        <div>• VNet & NAT Gateways</div>
+                        <div>• Azure Functions</div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Development</h4>
+                        <div>• C# .NET Development</div>
+                        <div>• Blazor Web Development</div>
+                        <div>• Python Data Engineering</div>
+                        <div>• REST API Workflows</div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Data & Analytics</h4>
+                        <div>• Microsoft Power BI</div>
+                        <div>• Data Analysis</div>
+                        <div>• Database Configuration</div>
+                        <div>• Artificial Intelligence</div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Microsoft Ecosystem</h4>
+                        <div>• Power Automate & PowerApps</div>
+                        <div>• Microsoft SharePoint</div>
+                        <div>• Azure Certified</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">PROFESSIONAL EXPERIENCE</div>
+                
+                <div class="experience-item">
+                    <div class="job-title">Senior Technical Consultant</div>
+                    <div class="company">Wood</div>
+                    <div class="duration">August 2024 - Present (10 months)</div>
+                    <div class="location">Aberdeen, Scotland, United Kingdom</div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-title">Digital Solutions Engineer</div>
+                    <div class="company">Wood</div>
+                    <div class="duration">August 2021 - August 2024 (3 years 1 month)</div>
+                    <div class="location">Aberdeen, Scotland, United Kingdom</div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-title">Graduate Database Integrity Engineer</div>
+                    <div class="company">Wood</div>
+                    <div class="duration">August 2019 - August 2021 (2 years 1 month)</div>
+                    <div class="location">Aberdeen, Scotland, United Kingdom</div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-title">IT Technician</div>
+                    <div class="company">Worcester Sixth Form College</div>
+                    <div class="duration">September 2016 - August 2018 (2 years)</div>
+                    <div class="location">Worcester, United Kingdom</div>
+                    <div>• Moodle Developer • Network Infrastructure • IT Support</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">EDUCATION</div>
+                
+                <div class="education-item">
+                    <div class="degree">Master's Degree - Artificial Intelligence</div>
+                    <div class="institution">University of Aberdeen</div>
+                    <div class="year">2018 - 2019</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="degree">Bachelor of Science (BSc) - Computing</div>
+                    <div class="institution">University of Worcester</div>
+                    <div class="year">2014 - 2018</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="degree">HNC (Level 4) - Computer Systems</div>
+                    <div class="institution">UCMK</div>
+                    <div class="year">2012 - 2013</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="degree">Bachelor of Technology (BTech) - IT</div>
+                    <div class="institution">Milton Keynes College</div>
+                    <div class="year">2010 - 2012</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">CERTIFICATIONS</div>
+                <div class="output">🏆 Microsoft Certified: Azure Fundamentals</div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center; color: #888;">
+                <span class="prompt">user@github-pages:~$</span> <span class="cursor">█</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
