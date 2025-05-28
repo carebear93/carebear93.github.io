@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kristian Care MSc - CV</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
         
         * {
             margin: 0;
@@ -14,7 +14,7 @@
         }
         
         body {
-            background-color: #f0f2f5;
+            background-color: #ffffff;
             color: #333;
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
@@ -24,7 +24,7 @@
             overflow-x: hidden;
         }
         
-        /* Pixel art background elements */
+        /* Detailed pixel art background elements */
         .pixel-bg {
             position: fixed;
             top: 0;
@@ -37,28 +37,42 @@
         
         .pixel {
             position: absolute;
-            opacity: 0.1;
+            opacity: 0.3;
         }
         
         .computer {
-            width: 32px;
-            height: 32px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='8' y='6' width='16' height='12' fill='%23555'/%3E%3Crect x='10' y='8' width='12' height='8' fill='%2300aaff'/%3E%3Crect x='6' y='18' width='20' height='2' fill='%23555'/%3E%3Crect x='12' y='20' width='8' height='4' fill='%23555'/%3E%3Crect x='10' y='24' width='12' height='2' fill='%23555'/%3E%3C/svg%3E");
-            animation: float 15s infinite linear;
-        }
-        
-        .number {
-            font-family: monospace;
-            font-size: 24px;
-            color: #0066cc;
+            width: 48px;
+            height: 48px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3C!-- Monitor --%3E%3Crect x='8' y='8' width='32' height='20' fill='%23003737' rx='2'/%3E%3Crect x='10' y='10' width='28' height='16' fill='%2300d6c2'/%3E%3C!-- Screen content --%3E%3Crect x='12' y='12' width='4' height='2' fill='%23003737'/%3E%3Crect x='18' y='12' width='6' height='2' fill='%23003737'/%3E%3Crect x='12' y='16' width='8' height='2' fill='%23003737'/%3E%3Crect x='12' y='20' width='12' height='2' fill='%23003737'/%3E%3C!-- Stand --%3E%3Crect x='20' y='28' width='8' height='6' fill='%23003737'/%3E%3Crect x='16' y='34' width='16' height='4' fill='%23003737' rx='2'/%3E%3C!-- Power light --%3E%3Ccircle cx='36' cy='26' r='2' fill='%2300d6c2'/%3E%3C/svg%3E");
             animation: float 20s infinite linear;
         }
         
+        .terminal-window {
+            width: 64px;
+            height: 48px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 48'%3E%3C!-- Window --%3E%3Crect x='4' y='4' width='56' height='40' fill='%23003737' rx='4'/%3E%3C!-- Title bar --%3E%3Crect x='4' y='4' width='56' height='8' fill='%2300d6c2' rx='4 4 0 0'/%3E%3C!-- Window controls --%3E%3Ccircle cx='12' cy='8' r='2' fill='%23ff6b6b'/%3E%3Ccircle cx='20' cy='8' r='2' fill='%23ffd93d'/%3E%3Ccircle cx='28' cy='8' r='2' fill='%236bcf7f'/%3E%3C!-- Terminal text --%3E%3Crect x='8' y='16' width='2' height='2' fill='%2300d6c2'/%3E%3Crect x='12' y='16' width='6' height='2' fill='%2300d6c2'/%3E%3Crect x='8' y='20' width='4' height='2' fill='%2300d6c2'/%3E%3Crect x='14' y='20' width='8' height='2' fill='%2300d6c2'/%3E%3Crect x='8' y='24' width='12' height='2' fill='%2300d6c2'/%3E%3Crect x='8' y='28' width='6' height='2' fill='%2300d6c2'/%3E%3C!-- Cursor --%3E%3Crect x='16' y='28' width='2' height='2' fill='%2300d6c2'/%3E%3Canimation attributeName='opacity' values='1;0;1' dur='1s' repeatCount='indefinite'/%3E%3C/svg%3E");
+            animation: float 25s infinite linear;
+        }
+        
         .spaceship {
+            width: 56px;
+            height: 56px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3C!-- Main body --%3E%3Cellipse cx='28' cy='28' rx='16' ry='8' fill='%23003737'/%3E%3Cellipse cx='28' cy='28' rx='20' ry='6' fill='%2300d6c2'/%3E%3C!-- Cockpit --%3E%3Ccircle cx='28' cy='28' r='6' fill='%23eefffb'/%3E%3Ccircle cx='28' cy='28' r='4' fill='%2300d6c2'/%3E%3C!-- Wings --%3E%3Cellipse cx='12' cy='28' rx='8' ry='4' fill='%23003737'/%3E%3Cellipse cx='44' cy='28' rx='8' ry='4' fill='%23003737'/%3E%3C!-- Engines --%3E%3Crect x='6' y='26' width='4' height='4' fill='%2300d6c2' rx='2'/%3E%3Crect x='46' y='26' width='4' height='4' fill='%2300d6c2' rx='2'/%3E%3C!-- Exhaust --%3E%3Crect x='2' y='27' width='4' height='2' fill='%23ff6b6b'/%3E%3Crect x='50' y='27' width='4' height='2' fill='%23ff6b6b'/%3E%3C/svg%3E");
+            animation: float 30s infinite linear;
+        }
+        
+        .code-block {
+            width: 40px;
+            height: 32px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 32'%3E%3Crect x='2' y='2' width='36' height='28' fill='%23003737' rx='2'/%3E%3Ctext x='6' y='10' font-family='monospace' font-size='4' fill='%2300d6c2'%3E%7B%3C/text%3E%3Ctext x='6' y='16' font-family='monospace' font-size='4' fill='%2300d6c2'%3E%20%20if%3C/text%3E%3Ctext x='6' y='22' font-family='monospace' font-size='4' fill='%2300d6c2'%3E%7D%3C/text%3E%3C/svg%3E");
+            animation: float 18s infinite linear;
+        }
+        
+        .robot {
             width: 48px;
             height: 48px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cellipse cx='24' cy='24' rx='10' ry='5' fill='%23888'/%3E%3Cellipse cx='24' cy='24' rx='16' ry='3' fill='%23666'/%3E%3Ccircle cx='24' cy='24' r='4' fill='%230099ff'/%3E%3Crect x='22' y='14' width='4' height='6' fill='%23555'/%3E%3C/svg%3E");
-            animation: float 25s infinite linear;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3C!-- Head --%3E%3Crect x='16' y='8' width='16' height='12' fill='%2300d6c2' rx='2'/%3E%3C!-- Eyes --%3E%3Ccircle cx='22' cy='14' r='2' fill='%23003737'/%3E%3Ccircle cx='26' cy='14' r='2' fill='%23003737'/%3E%3C!-- Antenna --%3E%3Crect x='23' y='4' width='2' height='4' fill='%23003737'/%3E%3Ccircle cx='24' cy='4' r='2' fill='%2300d6c2'/%3E%3C!-- Body --%3E%3Crect x='18' y='20' width='12' height='16' fill='%23003737' rx='2'/%3E%3C!-- Chest panel --%3E%3Crect x='20' y='24' width='8' height='8' fill='%2300d6c2' rx='1'/%3E%3Ccircle cx='24' cy='28' r='2' fill='%23eefffb'/%3E%3C!-- Arms --%3E%3Crect x='12' y='22' width='4' height='8' fill='%2300d6c2' rx='2'/%3E%3Crect x='32' y='22' width='4' height='8' fill='%2300d6c2' rx='2'/%3E%3C!-- Legs --%3E%3Crect x='20' y='36' width='3' height='8' fill='%2300d6c2' rx='1'/%3E%3Crect x='25' y='36' width='3' height='8' fill='%2300d6c2' rx='1'/%3E%3C/svg%3E");
+            animation: float 22s infinite linear;
         }
         
         @keyframes float {
@@ -66,47 +80,82 @@
                 transform: translate(0, 0) rotate(0deg);
             }
             25% {
-                transform: translate(100px, 50px) rotate(90deg);
+                transform: translate(150px, 100px) rotate(90deg);
             }
             50% {
-                transform: translate(200px, 0) rotate(180deg);
+                transform: translate(300px, 50px) rotate(180deg);
             }
             75% {
-                transform: translate(100px, -50px) rotate(270deg);
+                transform: translate(150px, -50px) rotate(270deg);
             }
             100% {
                 transform: translate(0, 0) rotate(360deg);
             }
         }
         
-        /* Paper container */
+        /* Paper container with terminal touches */
         .paper {
             max-width: 1000px;
             margin: 0 auto;
             background-color: #ffffff;
-            border-radius: 8px;
+            border-radius: 12px;
             padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 55, 55, 0.1);
             position: relative;
             z-index: 1;
+            border: 2px solid #eefffb;
+        }
+        
+        .terminal-header {
+            background: linear-gradient(135deg, #003737, #00d6c2);
+            color: #ffffff;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            margin: -40px -40px 30px -40px;
+            font-family: 'JetBrains Mono', monospace;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .terminal-controls {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .control-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .close { background-color: #ff6b6b; }
+        .minimize { background-color: #ffd93d; }
+        .maximize { background-color: #6bcf7f; }
+        
+        .terminal-title {
+            margin-left: 15px;
+            font-weight: 500;
         }
         
         .header {
             text-align: center;
             margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eaeaea;
+            padding: 25px;
+            background: linear-gradient(135deg, #eefffb, #ffffff);
+            border-radius: 12px;
+            border: 1px solid #00d6c2;
         }
         
         .name {
-            color: #1a1a1a;
+            color: #003737;
             font-size: 2.5em;
             font-weight: 700;
             margin-bottom: 5px;
         }
         
         .title {
-            color: #0066cc;
+            color: #00d6c2;
             font-size: 1.2em;
             font-weight: 500;
             margin-bottom: 15px;
@@ -122,8 +171,12 @@
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 5px;
-            color: #555;
+            gap: 8px;
+            color: #003737;
+            background-color: #eefffb;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 500;
         }
         
         .section {
@@ -131,12 +184,20 @@
         }
         
         .section-title {
-            color: #0066cc;
+            color: #003737;
             font-weight: 600;
             font-size: 1.3em;
             margin-bottom: 15px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #eaeaea;
+            padding: 10px 15px;
+            background: linear-gradient(135deg, #00d6c2, #eefffb);
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .section-title::before {
+            content: '> ';
+            color: #003737;
+            font-weight: bold;
         }
         
         .skills-grid {
@@ -147,102 +208,109 @@
         }
         
         .skill-category {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;
+            background: linear-gradient(135deg, #eefffb, #ffffff);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 214, 194, 0.1);
+            border: 1px solid #00d6c2;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .skill-category:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 214, 194, 0.2);
         }
         
         .skill-category h4 {
-            color: #0066cc;
-            margin-bottom: 10px;
+            color: #003737;
+            margin-bottom: 15px;
             font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .skill-category h4::before {
+            content: '$ ';
+            color: #00d6c2;
         }
         
         .skill-category div {
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            color: #003737;
+            padding-left: 10px;
         }
         
-        .experience-item {
+        .skill-category div::before {
+            content: '• ';
+            color: #00d6c2;
+            font-weight: bold;
+        }
+        
+        .experience-item, .education-item {
             margin-bottom: 25px;
-            padding: 15px;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;
+            padding: 20px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #eefffb, #ffffff);
+            box-shadow: 0 5px 15px rgba(0, 214, 194, 0.1);
+            border: 1px solid #00d6c2;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .experience-item:hover {
-            transform: translateY(-5px);
+        .experience-item:hover, .education-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 214, 194, 0.2);
         }
         
-        .job-title {
-            color: #1a1a1a;
+        .job-title, .degree {
+            color: #003737;
             font-weight: 600;
             font-size: 1.1em;
+            font-family: 'JetBrains Mono', monospace;
         }
         
-        .company {
-            color: #0066cc;
+        .company, .institution {
+            color: #00d6c2;
             font-weight: 500;
+            font-size: 1.05em;
         }
         
-        .duration {
-            color: #666;
+        .duration, .year {
+            color: #003737;
             font-size: 0.9em;
             margin-top: 5px;
+            opacity: 0.8;
         }
         
         .location {
-            color: #888;
+            color: #00d6c2;
             font-size: 0.9em;
             margin-bottom: 5px;
-        }
-        
-        .education-item {
-            margin-bottom: 20px;
-            padding: 15px;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;
-        }
-        
-        .education-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .degree {
-            color: #1a1a1a;
-            font-weight: 600;
-        }
-        
-        .institution {
-            color: #0066cc;
-            font-weight: 500;
-        }
-        
-        .year {
-            color: #666;
-            font-size: 0.9em;
-            margin-top: 5px;
+            opacity: 0.9;
         }
         
         .certification {
             display: inline-block;
-            background-color: #f0f7ff;
-            color: #0066cc;
-            padding: 8px 15px;
-            border-radius: 20px;
+            background: linear-gradient(135deg, #00d6c2, #eefffb);
+            color: #003737;
+            padding: 12px 20px;
+            border-radius: 25px;
             margin-right: 10px;
             margin-bottom: 10px;
-            font-weight: 500;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 214, 194, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .certification:hover {
+            transform: translateY(-3px);
+        }
+        
+        .summary-text {
+            background: linear-gradient(135deg, #eefffb, #ffffff);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #00d6c2;
+            color: #003737;
+            line-height: 1.7;
         }
         
         @media (max-width: 768px) {
@@ -252,6 +320,11 @@
             
             .paper {
                 padding: 20px;
+            }
+            
+            .terminal-header {
+                margin: -20px -20px 20px -20px;
+                padding: 12px 15px;
             }
             
             .contact-info {
@@ -270,27 +343,40 @@
     </style>
 </head>
 <body>
-    <!-- Pixel art background -->
+    <!-- Detailed pixel art background -->
     <div class="pixel-bg">
         <!-- Computers -->
         <div class="pixel computer" style="top: 10%; left: 5%;"></div>
-        <div class="pixel computer" style="top: 30%; left: 80%;"></div>
-        <div class="pixel computer" style="top: 70%; left: 15%;"></div>
-        <div class="pixel computer" style="top: 85%; left: 75%;"></div>
+        <div class="pixel computer" style="top: 60%; left: 85%;"></div>
+        <div class="pixel computer" style="top: 80%; left: 15%;"></div>
         
-        <!-- Numbers -->
-        <div class="pixel number" style="top: 15%; left: 25%;">01</div>
-        <div class="pixel number" style="top: 45%; left: 90%;">10</div>
-        <div class="pixel number" style="top: 65%; left: 40%;">11</div>
-        <div class="pixel number" style="top: 5%; left: 60%;">00</div>
+        <!-- Terminal windows -->
+        <div class="pixel terminal-window" style="top: 25%; left: 80%;"></div>
+        <div class="pixel terminal-window" style="top: 70%; left: 10%;"></div>
         
         <!-- Spaceships -->
-        <div class="pixel spaceship" style="top: 20%; left: 40%;"></div>
-        <div class="pixel spaceship" style="top: 50%; left: 10%;"></div>
-        <div class="pixel spaceship" style="top: 80%; left: 60%;"></div>
+        <div class="pixel spaceship" style="top: 15%; left: 40%;"></div>
+        <div class="pixel spaceship" style="top: 85%; left: 60%;"></div>
+        
+        <!-- Code blocks -->
+        <div class="pixel code-block" style="top: 35%; left: 20%;"></div>
+        <div class="pixel code-block" style="top: 55%; left: 90%;"></div>
+        
+        <!-- Robots -->
+        <div class="pixel robot" style="top: 45%; left: 5%;"></div>
+        <div class="pixel robot" style="top: 20%; left: 75%;"></div>
     </div>
     
     <div class="paper">
+        <div class="terminal-header">
+            <div class="terminal-controls">
+                <div class="control-btn close"></div>
+                <div class="control-btn minimize"></div>
+                <div class="control-btn maximize"></div>
+            </div>
+            <div class="terminal-title">kristian_care_cv.exe</div>
+        </div>
+        
         <div class="header">
             <div class="name">KRISTIAN CARE MSc</div>
             <div class="title">Senior Technical Consultant</div>
@@ -313,12 +399,12 @@
         
         <div class="section">
             <div class="section-title">SUMMARY</div>
-            <p>
+            <div class="summary-text">
                 Senior Technical Consultant with educational background in Computing and 
                 Artificial Intelligence. Professional experience in technical support and 
                 development. Main focus: bringing digital elements to improve legacy workflows, 
                 increasing revenue potential, R&D time, and exploring enriched digital solutions.
-            </p>
+            </div>
         </div>
         
         <div class="section">
@@ -326,31 +412,31 @@
             <div class="skills-grid">
                 <div class="skill-category">
                     <h4>Cloud & DevOps</h4>
-                    <div>• Microsoft Azure</div>
-                    <div>• Azure DevOps</div>
-                    <div>• Azure Logic Apps</div>
-                    <div>• VNet & NAT Gateways</div>
-                    <div>• Azure Functions</div>
+                    <div>Microsoft Azure</div>
+                    <div>Azure DevOps</div>
+                    <div>Azure Logic Apps</div>
+                    <div>VNet & NAT Gateways</div>
+                    <div>Azure Functions</div>
                 </div>
                 <div class="skill-category">
                     <h4>Development</h4>
-                    <div>• C# .NET Development</div>
-                    <div>• Blazor Web Development</div>
-                    <div>• Python Data Engineering</div>
-                    <div>• REST API Workflows</div>
+                    <div>C# .NET Development</div>
+                    <div>Blazor Web Development</div>
+                    <div>Python Data Engineering</div>
+                    <div>REST API Workflows</div>
                 </div>
                 <div class="skill-category">
                     <h4>Data & Analytics</h4>
-                    <div>• Microsoft Power BI</div>
-                    <div>• Data Analysis</div>
-                    <div>• Database Configuration</div>
-                    <div>• Artificial Intelligence</div>
+                    <div>Microsoft Power BI</div>
+                    <div>Data Analysis</div>
+                    <div>Database Configuration</div>
+                    <div>Artificial Intelligence</div>
                 </div>
                 <div class="skill-category">
                     <h4>Microsoft Ecosystem</h4>
-                    <div>• Power Automate & PowerApps</div>
-                    <div>• Microsoft SharePoint</div>
-                    <div>• Azure Certified</div>
+                    <div>Power Automate & PowerApps</div>
+                    <div>Microsoft SharePoint</div>
+                    <div>Azure Certified</div>
                 </div>
             </div>
         </div>
@@ -384,7 +470,7 @@
                 <div class="company">Worcester Sixth Form College</div>
                 <div class="duration">September 2016 - August 2018 (2 years)</div>
                 <div class="location">Worcester, United Kingdom</div>
-                <div>• Moodle Developer • Network Infrastructure • IT Support</div>
+                <div style="margin-top: 10px; color: #003737;">• Moodle Developer • Network Infrastructure • IT Support</div>
             </div>
         </div>
         
@@ -419,21 +505,20 @@
         <div class="section">
             <div class="section-title">CERTIFICATIONS</div>
             <div class="certification">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
                 Microsoft Certified: Azure Fundamentals
             </div>
         </div>
     </div>
 
     <script>
-        // Add more dynamic pixel elements
+        // Add more dynamic detailed pixel elements
         function createPixelElements() {
             const pixelBg = document.querySelector('.pixel-bg');
-            const elements = ['computer', 'number', 'spaceship'];
-            const numbers = ['01', '10', '11', '00'];
+            const elements = ['computer', 'terminal-window', 'spaceship', 'code-block', 'robot'];
             
-            // Create 20 additional random elements
-            for (let i = 0; i < 20; i++) {
+            // Create 15 additional random elements
+            for (let i = 0; i < 15; i++) {
                 const type = elements[Math.floor(Math.random() * elements.length)];
                 const el = document.createElement('div');
                 el.className = `pixel ${type}`;
@@ -442,13 +527,8 @@
                 el.style.top = `${Math.random() * 100}%`;
                 el.style.left = `${Math.random() * 100}%`;
                 
-                // If it's a number, set the content
-                if (type === 'number') {
-                    el.textContent = numbers[Math.floor(Math.random() * numbers.length)];
-                }
-                
                 // Random animation duration
-                const duration = 15 + Math.random() * 20;
+                const duration = 18 + Math.random() * 15;
                 el.style.animation = `float ${duration}s infinite linear`;
                 
                 // Random delay
