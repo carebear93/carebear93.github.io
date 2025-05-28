@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kristian Care MSc - CV</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
         
         * {
             margin: 0;
@@ -14,9 +14,9 @@
         }
         
         body {
-            background-color: #ffffff;
-            color: #333;
-            font-family: 'Poppins', sans-serif;
+            background-color: #0a1a1a;
+            color: #eefffb;
+            font-family: 'JetBrains Mono', monospace;
             line-height: 1.6;
             padding: 20px;
             min-height: 100vh;
@@ -93,29 +93,28 @@
             }
         }
         
-        /* Paper container with terminal touches */
-        .paper {
+        /* Terminal container */
+        .terminal {
             max-width: 1000px;
             margin: 0 auto;
-            background-color: #ffffff;
+            background-color: #0a1a1a;
             border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 15px 35px rgba(0, 55, 55, 0.1);
+            padding: 0;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
             position: relative;
             z-index: 1;
-            border: 2px solid #eefffb;
+            border: 2px solid #00d6c2;
+            overflow: hidden;
         }
         
         .terminal-header {
-            background: linear-gradient(135deg, #003737, #00d6c2);
-            color: #ffffff;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            margin: -40px -40px 30px -40px;
-            font-family: 'JetBrains Mono', monospace;
+            background: #003737;
+            color: #00d6c2;
+            padding: 10px 15px;
             display: flex;
             align-items: center;
             gap: 10px;
+            border-bottom: 1px solid #00d6c2;
         }
         
         .terminal-controls {
@@ -136,14 +135,63 @@
         .terminal-title {
             margin-left: 15px;
             font-weight: 500;
+            flex-grow: 1;
+        }
+        
+        .command-line {
+            background: #001a1a;
+            color: #00d6c2;
+            padding: 10px 15px;
+            font-family: 'JetBrains Mono', monospace;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #003737;
+        }
+        
+        .prompt {
+            color: #00d6c2;
+            margin-right: 8px;
+        }
+        
+        .command {
+            color: #eefffb;
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background-color: #00d6c2;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+        
+        .terminal-content {
+            padding: 25px;
+            background-color: #001a1a;
+            color: #eefffb;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .paper {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            color: #003737;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         .header {
             text-align: center;
             margin-bottom: 30px;
-            padding: 25px;
+            padding: 20px;
             background: linear-gradient(135deg, #eefffb, #ffffff);
-            border-radius: 12px;
+            border-radius: 8px;
             border: 1px solid #00d6c2;
         }
         
@@ -165,7 +213,7 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px;
         }
         
         .contact-item {
@@ -174,90 +222,100 @@
             gap: 8px;
             color: #003737;
             background-color: #eefffb;
-            padding: 8px 15px;
+            padding: 6px 12px;
             border-radius: 20px;
             font-weight: 500;
+            font-size: 0.9em;
         }
         
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         
         .section-title {
+            font-family: 'JetBrains Mono', monospace;
             color: #003737;
             font-weight: 600;
-            font-size: 1.3em;
+            font-size: 1.2em;
             margin-bottom: 15px;
-            padding: 10px 15px;
+            padding: 8px 12px;
             background: linear-gradient(135deg, #00d6c2, #eefffb);
-            border-radius: 8px;
-            font-family: 'JetBrains Mono', monospace;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
         }
         
         .section-title::before {
-            content: '> ';
+            content: '$ ';
             color: #003737;
             font-weight: bold;
+            margin-right: 8px;
         }
         
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            gap: 15px;
             margin-bottom: 20px;
         }
         
         .skill-category {
-            background: linear-gradient(135deg, #eefffb, #ffffff);
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 214, 194, 0.1);
-            border: 1px solid #00d6c2;
+            background: #eefffb;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 214, 194, 0.1);
+            border-left: 3px solid #00d6c2;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .skill-category:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 214, 194, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 214, 194, 0.2);
         }
         
         .skill-category h4 {
             color: #003737;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-weight: 600;
             font-family: 'JetBrains Mono', monospace;
+            display: flex;
+            align-items: center;
         }
         
         .skill-category h4::before {
-            content: '$ ';
+            content: '> ';
             color: #00d6c2;
+            margin-right: 5px;
         }
         
         .skill-category div {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             color: #003737;
-            padding-left: 10px;
+            padding-left: 15px;
+            position: relative;
         }
         
         .skill-category div::before {
-            content: '• ';
+            content: '•';
             color: #00d6c2;
+            position: absolute;
+            left: 0;
             font-weight: bold;
         }
         
         .experience-item, .education-item {
-            margin-bottom: 25px;
-            padding: 20px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, #eefffb, #ffffff);
-            box-shadow: 0 5px 15px rgba(0, 214, 194, 0.1);
-            border: 1px solid #00d6c2;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #eefffb;
+            box-shadow: 0 3px 10px rgba(0, 214, 194, 0.1);
+            border-left: 3px solid #00d6c2;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .experience-item:hover, .education-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 214, 194, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 214, 194, 0.2);
         }
         
         .job-title, .degree {
@@ -270,7 +328,7 @@
         .company, .institution {
             color: #00d6c2;
             font-weight: 500;
-            font-size: 1.05em;
+            font-size: 1em;
         }
         
         .duration, .year {
@@ -291,12 +349,12 @@
             display: inline-block;
             background: linear-gradient(135deg, #00d6c2, #eefffb);
             color: #003737;
-            padding: 12px 20px;
-            border-radius: 25px;
+            padding: 10px 15px;
+            border-radius: 20px;
             margin-right: 10px;
             margin-bottom: 10px;
             font-weight: 600;
-            box-shadow: 0 5px 15px rgba(0, 214, 194, 0.2);
+            box-shadow: 0 3px 10px rgba(0, 214, 194, 0.2);
             transition: transform 0.3s ease;
         }
         
@@ -305,12 +363,43 @@
         }
         
         .summary-text {
-            background: linear-gradient(135deg, #eefffb, #ffffff);
-            padding: 20px;
-            border-radius: 12px;
-            border: 1px solid #00d6c2;
+            background: #eefffb;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #00d6c2;
             color: #003737;
             line-height: 1.7;
+        }
+        
+        .terminal-footer {
+            background: #001a1a;
+            color: #00d6c2;
+            padding: 10px 15px;
+            font-family: 'JetBrains Mono', monospace;
+            border-top: 1px solid #003737;
+            display: flex;
+            align-items: center;
+        }
+        
+        .terminal-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #6bcf7f;
+        }
+        
+        .ascii-divider {
+            font-family: 'JetBrains Mono', monospace;
+            color: #00d6c2;
+            text-align: center;
+            margin: 15px 0;
+            opacity: 0.7;
         }
         
         @media (max-width: 768px) {
@@ -318,13 +407,16 @@
                 padding: 10px;
             }
             
-            .paper {
-                padding: 20px;
+            .terminal {
+                border-radius: 8px;
             }
             
-            .terminal-header {
-                margin: -20px -20px 20px -20px;
-                padding: 12px 15px;
+            .terminal-content {
+                padding: 15px;
+            }
+            
+            .paper {
+                padding: 15px;
             }
             
             .contact-info {
@@ -367,146 +459,179 @@
         <div class="pixel robot" style="top: 20%; left: 75%;"></div>
     </div>
     
-    <div class="paper">
+    <div class="terminal">
         <div class="terminal-header">
             <div class="terminal-controls">
                 <div class="control-btn close"></div>
                 <div class="control-btn minimize"></div>
                 <div class="control-btn maximize"></div>
             </div>
-            <div class="terminal-title">kristian_care_cv.exe</div>
+            <div class="terminal-title">kristian_care_cv.sh</div>
         </div>
         
-        <div class="header">
-            <div class="name">KRISTIAN CARE MSc</div>
-            <div class="title">Senior Technical Consultant</div>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    kris_care@hotmail.com
+        <div class="command-line">
+            <span class="prompt">user@github-pages:~$</span>
+            <span class="command">cat kristian_care_cv.md | render</span>
+            <span class="cursor"></span>
+        </div>
+        
+        <div class="terminal-content">
+            <div class="paper">
+                <div class="header">
+                    <div class="name">KRISTIAN CARE MSc</div>
+                    <div class="title">Senior Technical Consultant</div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            kris_care@hotmail.com
+                        </div>
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            linkedin.com/in/kristian-care-msc-735aa3124
+                        </div>
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            Aberdeen, Scotland, United Kingdom
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    linkedin.com/in/kristian-care-msc-735aa3124
+                
+                <div class="ascii-divider">
+                    ====================================
                 </div>
-                <div class="contact-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    Cults, Scotland, United Kingdom
+                
+                <div class="section">
+                    <div class="section-title">SUMMARY</div>
+                    <div class="summary-text">
+                        Senior Technical Consultant with educational background in Computing and 
+                        Artificial Intelligence. Professional experience in technical support and 
+                        development. Main focus: bringing digital elements to improve legacy workflows, 
+                        increasing revenue potential, R&D time, and exploring enriched digital solutions.
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">TECHNICAL SKILLS</div>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Cloud & DevOps</h4>
+                            <div>Microsoft Azure</div>
+                            <div>Azure DevOps</div>
+                            <div>Azure Logic Apps</div>
+                            <div>VNet & NAT Gateways</div>
+                            <div>Azure Functions</div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Development</h4>
+                            <div>C# .NET Development</div>
+                            <div>Blazor Web Development</div>
+                            <div>Python Data Engineering</div>
+                            <div>REST API Workflows</div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Data & Analytics</h4>
+                            <div>Microsoft Power BI</div>
+                            <div>Data Analysis</div>
+                            <div>Database Configuration</div>
+                            <div>Artificial Intelligence</div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Microsoft Ecosystem</h4>
+                            <div>Power Automate & PowerApps</div>
+                            <div>Microsoft SharePoint</div>
+                            <div>Azure Certified</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ascii-divider">
+                    ====================================
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">PROFESSIONAL EXPERIENCE</div>
+                    
+                    <div class="experience-item">
+                        <div class="job-title">Senior Technical Consultant</div>
+                        <div class="company">Wood</div>
+                        <div class="duration">August 2024 - Present (10 months)</div>
+                        <div class="location">Aberdeen, Scotland, United Kingdom</div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="job-title">Digital Solutions Engineer</div>
+                        <div class="company">Wood</div>
+                        <div class="duration">August 2021 - August 2024 (3 years 1 month)</div>
+                        <div class="location">Aberdeen, Scotland, United Kingdom</div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="job-title">Graduate Database Integrity Engineer</div>
+                        <div class="company">Wood</div>
+                        <div class="duration">August 2019 - August 2021 (2 years 1 month)</div>
+                        <div class="location">Aberdeen, Scotland, United Kingdom</div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="job-title">IT Technician</div>
+                        <div class="company">Worcester Sixth Form College</div>
+                        <div class="duration">September 2016 - August 2018 (2 years)</div>
+                        <div class="location">Worcester, United Kingdom</div>
+                        <div style="margin-top: 10px; color: #003737;">• Moodle Developer • Network Infrastructure • IT Support</div>
+                    </div>
+                </div>
+                
+                <div class="ascii-divider">
+                    ====================================
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">EDUCATION</div>
+                    
+                    <div class="education-item">
+                        <div class="degree">Master's Degree - Artificial Intelligence</div>
+                        <div class="institution">University of Aberdeen</div>
+                        <div class="year">2018 - 2019</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="degree">Bachelor of Science (BSc) - Computing</div>
+                        <div class="institution">University of Worcester</div>
+                        <div class="year">2014 - 2018</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="degree">HNC (Level 4) - Computer Systems</div>
+                        <div class="institution">UCMK</div>
+                        <div class="year">2012 - 2013</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="degree">Bachelor of Technology (BTech) - IT</div>
+                        <div class="institution">Milton Keynes College</div>
+                        <div class="year">2010 - 2012</div>
+                    </div>
+                </div>
+                
+                <div class="ascii-divider">
+                    ====================================
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">CERTIFICATIONS</div>
+                    <div class="certification">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                        Microsoft Certified: Azure Fundamentals
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="section">
-            <div class="section-title">SUMMARY</div>
-            <div class="summary-text">
-                Senior Technical Consultant with educational background in Computing and 
-                Artificial Intelligence. Professional experience in technical support and 
-                development. Main focus: bringing digital elements to improve legacy workflows, 
-                increasing revenue potential, R&D time, and exploring enriched digital solutions.
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">TECHNICAL SKILLS</div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Cloud & DevOps</h4>
-                    <div>Microsoft Azure</div>
-                    <div>Azure DevOps</div>
-                    <div>Azure Logic Apps</div>
-                    <div>VNet & NAT Gateways</div>
-                    <div>Azure Functions</div>
-                </div>
-                <div class="skill-category">
-                    <h4>Development</h4>
-                    <div>C# .NET Development</div>
-                    <div>Blazor Web Development</div>
-                    <div>Python Data Engineering</div>
-                    <div>REST API Workflows</div>
-                </div>
-                <div class="skill-category">
-                    <h4>Data & Analytics</h4>
-                    <div>Microsoft Power BI</div>
-                    <div>Data Analysis</div>
-                    <div>Database Configuration</div>
-                    <div>Artificial Intelligence</div>
-                </div>
-                <div class="skill-category">
-                    <h4>Microsoft Ecosystem</h4>
-                    <div>Power Automate & PowerApps</div>
-                    <div>Microsoft SharePoint</div>
-                    <div>Azure Certified</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">PROFESSIONAL EXPERIENCE</div>
-            
-            <div class="experience-item">
-                <div class="job-title">Senior Technical Consultant</div>
-                <div class="company">Wood</div>
-                <div class="duration">August 2024 - Present (10 months)</div>
-                <div class="location">Aberdeen, Scotland, United Kingdom</div>
-            </div>
-            
-            <div class="experience-item">
-                <div class="job-title">Digital Solutions Engineer</div>
-                <div class="company">Wood</div>
-                <div class="duration">August 2021 - August 2024 (3 years 1 month)</div>
-                <div class="location">Aberdeen, Scotland, United Kingdom</div>
-            </div>
-            
-            <div class="experience-item">
-                <div class="job-title">Graduate Database Integrity Engineer</div>
-                <div class="company">Wood</div>
-                <div class="duration">August 2019 - August 2021 (2 years 1 month)</div>
-                <div class="location">Aberdeen, Scotland, United Kingdom</div>
-            </div>
-            
-            <div class="experience-item">
-                <div class="job-title">IT Technician</div>
-                <div class="company">Worcester Sixth Form College</div>
-                <div class="duration">September 2016 - August 2018 (2 years)</div>
-                <div class="location">Worcester, United Kingdom</div>
-                <div style="margin-top: 10px; color: #003737;">• Moodle Developer • Network Infrastructure • IT Support</div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">EDUCATION</div>
-            
-            <div class="education-item">
-                <div class="degree">Master's Degree - Artificial Intelligence</div>
-                <div class="institution">University of Aberdeen</div>
-                <div class="year">2018 - 2019</div>
-            </div>
-            
-            <div class="education-item">
-                <div class="degree">Bachelor of Science (BSc) - Computing</div>
-                <div class="institution">University of Worcester</div>
-                <div class="year">2014 - 2018</div>
-            </div>
-            
-            <div class="education-item">
-                <div class="degree">HNC (Level 4) - Computer Systems</div>
-                <div class="institution">UCMK</div>
-                <div class="year">2012 - 2013</div>
-            </div>
-            
-            <div class="education-item">
-                <div class="degree">Bachelor of Technology (BTech) - IT</div>
-                <div class="institution">Milton Keynes College</div>
-                <div class="year">2010 - 2012</div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">CERTIFICATIONS</div>
-            <div class="certification">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-                Microsoft Certified: Azure Fundamentals
+        <div class="terminal-footer">
+            <div class="terminal-status">
+                <div class="status-indicator"></div>
+                <span>Process completed successfully</span>
             </div>
         </div>
     </div>
@@ -538,8 +663,30 @@
             }
         }
         
+        // Simulate typing effect
+        function simulateTyping() {
+            const commandLine = document.querySelector('.command');
+            const originalText = commandLine.textContent;
+            commandLine.textContent = '';
+            
+            let i = 0;
+            const typingInterval = setInterval(() => {
+                if (i < originalText.length) {
+                    commandLine.textContent += originalText.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typingInterval);
+                    // After typing is complete, show the cursor
+                    document.querySelector('.cursor').style.display = 'inline-block';
+                }
+            }, 50);
+        }
+        
         // Run after page load
-        window.addEventListener('load', createPixelElements);
+        window.addEventListener('load', () => {
+            createPixelElements();
+            simulateTyping();
+        });
     </script>
 </body>
 </html>
